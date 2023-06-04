@@ -1,0 +1,312 @@
+/*GENERAL*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+:root{
+    /*colors*/
+    --main-color: #fff;
+    --main-bcg: cornflowerblue;
+    --text-color: #222;
+    --alert-color: #f70c0c;
+    /*fonts*/
+    --main-font: 'Open Sans', sans-serif;
+
+    font-size: 16px;
+}
+
+body{
+    font-family: var(--main-font);
+    background-color: var(--main-bcg);
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h2{
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+button{
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+#main-content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*dynamic classes*/
+
+.selected{
+    background-color: var(--text-color) !important;
+    color: var(--main-color);
+    border: 1.4px solid var(--main-color);
+}
+.hide{
+    display: none !important;
+}
+
+/*home page*/
+
+#home-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.25rem 4rem;
+    background-color: var(--main-color);
+    border-radius: .75rem;
+    text-align: center;
+}
+.home-page-header{
+    text-transform: capitalize;
+}
+.home-page-header h2{
+    margin-top: 1rem;
+}
+.select-btns{
+    display: flex;
+    gap: 1.25rem;
+}
+.select-btns button{
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 1.4px solid var(--text-color);
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.select-btns button:hover{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border: 1.4px solid var(--main-color);
+}
+.error-alert{
+    display: none;
+    color: var(--alert-color);
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+#home-page-sub-btn{
+    padding: .5rem .75rem;
+    background-color: var(--main-bcg);
+    color: var(--main-color);
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 5px;    
+}
+#home-page-sub-btn:hover{
+    background: transparent;
+    color: var(--text-color);
+    border: 1.4px solid var(--text-color);
+}
+
+/*game-section*/
+
+#game-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+}
+.game-section-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--main-color);
+}
+.game-section-header h1{
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    font-weight: 100;
+    color: var(--text-color);
+}
+.game-section-header h2{
+    font-size: 1.5rem;
+}
+#chosen-category{
+    font-size: 1.25rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.game-section-header h3{
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+.game-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+.alphabet{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+.alphabet button{
+    padding: .75rem 1rem;
+    background: transparent;
+    color: var(--main-color);
+    text-transform: uppercase;
+    border: 1.5px solid var(--text-color);
+    border-radius: 5px;
+}
+.alphabet button:hover{
+    background-color: var(--text-color);
+}
+.word {
+    text-transform: capitalize;
+    letter-spacing: 3.5px;
+    font-size: 1.5rem;
+}
+.lives{
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: 100;
+}
+#hangman{
+    border: 2px dashed var(--text-color);
+}
+.control-btns{
+    margin-top: .75rem;
+    display: flex;
+    gap: 1.25rem;
+}
+.control-btns button{
+    width: 150px;
+    padding: .75rem 0;
+    background: transparent;
+    border: 1.5px solid var(--text-color);
+    border-radius: 5px;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: 100;
+}
+.control-btns button:hover{
+    background-color: var(--text-color);
+}
+
+/* ANIMATIONS */
+
+/*fade in and fade out*/
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 850px) {
+    #main-content{
+        height: 100%;
+        padding: 2.25rem 0;
+    }
+    .alphabet{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .game-section-header h2{
+        font-size: 1.25rem;
+    }
+    .game-section-header h3{
+        font-size: 1.15rem;
+    }
+    .word{
+        font-size: 1.25rem;
+    }
+    .lives{
+        font-size: 1.15rem;
+    }
+    .control-btns button{
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .game-section-header h2{
+        font-size: 1.15rem;
+    }
+    .game-section-header h3{
+        font-size: 1.05rem;
+    }
+    .word{
+        font-size: 1.15rem;
+    }
+    .lives{
+        font-size: 1.05rem;
+    }
+    .control-btns button{
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .alphabet{
+         grid-template-columns: repeat(6, 1fr);
+         grid-template-rows: repeat(4, 1fr);
+         gap: .75rem; 
+     }    
+     
+     .game-section-header h2{
+         font-size: 1.05rem;
+     }
+     .game-section-header h3{
+         font-size: .95rem;
+     }
+     .word{
+         font-size: 1.05rem;
+     }
+     .lives{
+         font-size: .95rem;
+     }
+     .control-btns button{
+         font-size: .95rem;
+     }
+ }
+
+ @media screen and (max-width: 375px) {
+    .game-section-header{
+        align-items: center;
+    }
+    .alphabet button{
+        padding: .5rem .75rem;
+    }
+    .game-section-header h3{
+        font-size: .7rem;
+        width: 280px;
+    }
+    .control-btns button{
+        width: 120px;
+    }
+ }

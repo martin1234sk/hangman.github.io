@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HANGMAN</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Ubuntu:ital,wght@0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <main id="main-content">
+            <section id="home-page">
+                <div class="home-page-container">
+                    <header class="home-page-header">
+                        <h1>let's play a hangman</h1>
+                        <h2>please select a category</h2>
+                    </header>
+                    <div class="select-btns">
+                        <button data-category="animals" id="animals-btn" class="select-btn">animals</button>
+                        <button data-category="people" id="people-btn" class="select-btn">people</button>
+                        <button data-category="food" id="food-btn" class="select-btn">food</button>
+                    </div>
+                    <p class="error-alert">please select a category!</p>
+                    <button id="home-page-sub-btn">start game</button>
+                </div>
+            </section>
+
+        <section id="game-section" class="hide">
+            <header class="game-section-header">
+                <h1>hangman</h1>
+                <h2> The chosen category is <span id="chosen-category">chosen category</span></h2>
+                <h3>Use the alphabet below to gues the word, or click hint to get clue</h3>
+            </header>
+            <div class="game-section-wrapper">
+                <div class="alphabet">
+                    <button id="a" class="letter-btn">a</button>
+                    <button id="b" class="letter-btn">b</button>
+                    <button id="c" class="letter-btn">c</button>
+                    <button id="d" class="letter-btn">d</button>
+                    <button id="e" class="letter-btn">e</button>
+                    <button id="f" class="letter-btn">f</button>
+                    <button id="g" class="letter-btn">g</button>
+                    <button id="h" class="letter-btn">h</button>
+                    <button id="i" class="letter-btn">i</button>
+                    <button id="j" class="letter-btn">j</button>
+                    <button id="k" class="letter-btn">k</button>
+                    <button id="l" class="letter-btn">l</button>
+                    <button id="m" class="letter-btn">m</button>
+                    <button id="n" class="letter-btn">n</button>
+                    <button id="o" class="letter-btn">o</button>
+                    <button id="p" class="letter-btn">p</button>
+                    <button id="q" class="letter-btn">q</button>
+                    <button id="r" class="letter-btn">r</button>
+                    <button id="s" class="letter-btn">s</button>
+                    <button id="t" class="letter-btn">t</button>
+                    <button id="u" class="letter-btn">u</button>
+                    <button id="v" class="letter-btn">v</button>
+                    <button id="w" class="letter-btn">w</button>
+                    <button id="x" class="letter-btn">x</button>
+                    <button id="y" class="letter-btn">y</button>
+                    <button id="z" class="letter-btn">z</button>
+                </div>
+                <h3 class="word"></h3>
+                <h3 class="lives">you have <span id="remaining-lives">10</span> lives!</h3>
+                <h3 id="hint" class="hide"></h3>
+                <canvas id="hangman">
+                    
+                </canvas>
+                <div class="control-btns">
+                    <button id="hint-btn">hint</button>
+                    <button id="play-again-btn">play again</button>
+                </div>
+            </div>
+        </section>
+        </main>
+        <script src="scripts/app.js"></script>
+    </body>
+</html>
