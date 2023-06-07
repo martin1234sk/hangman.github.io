@@ -53,7 +53,7 @@
         },
         secondCategory: {
             categoryTitle: 'people',
-            wordsArray: ["john cena", "pew die pie", "adam ondra", "joker", "eminem", "ozzy osbourne"],
+            wordsArray: ["john cena", "pewdiepie", "adam ondra", "joker", "eminem", "ozzy osbourne"],
             hints: ["badass", "fridays with...", "monkeys get jealous when they see him climbing", "the best laugh in the universe", "elevator", "he is never sobber"]
         },
         thirdCategory: {
@@ -337,8 +337,6 @@
         })
     })
 
-    // responsive canvas
-
     hintBtn.addEventListener('click', () =>{
         hangmanObject.showHint()
     })
@@ -347,21 +345,17 @@
         hangmanObject.playAgain()
     })
 
-
     // responsivity
 
         // responsive canvas
 
         window.addEventListener('resize', ()=>{
-            if(window.innerWidth >= 550){
-                canvas.width = 350
-                canvas.height = 250
+            if(window.innerWidth < 425){
+                canvas.width = 300
             }
-        })
 
-        window.addEventListener('resize', ()=>{
-            if(window.innerWidth >= 375){
-                canvas.width = 250
-                canvas.height = 300
+            if(window.innerWidth < 350){
+                canvas.width = 280
             }
+
         })
