@@ -271,6 +271,7 @@ button{
     }
 }
 
+
 @media screen and (max-width: 550px) {
     .alphabet{
          grid-template-columns: repeat(6, 1fr);
@@ -295,18 +296,36 @@ button{
      }
  }
 
- @media screen and (max-width: 375px) {
-    .game-section-header{
-        align-items: center;
+@media screen and (max-width: 425px) {
+    .home-page-container{
+        padding: 1.5rem 2.25rem;
     }
-    .alphabet button{
-        padding: .5rem .75rem;
+    .home-page-header h1{
+        font-size: 1.25rem !important;
+    }
+    .home-page-header h2{
+        font-size: 1rem !important;
+    }
+    .select-btns{
+        gap: 1rem;
+    }
+    .select-btns button{
+        font-size: .95rem;
+    }
+    #home-page-sub-btn{
+        font-size: .95rem;
+    }
+    .game-section-header h2{
+        font-size: .95rem;
     }
     .game-section-header h3{
-        font-size: .7rem;
-        width: 280px;
+        font-size: .8rem;
+        width: 260px;
     }
-    .control-btns button{
-        width: 120px;
+}
+
+@media screen and (max-width: 350px) {
+    .home-page-container{
+        padding: 1.5rem ;
     }
- }
+}
