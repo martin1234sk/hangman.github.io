@@ -10,6 +10,8 @@
    const wordLine = document.querySelector('.word')
    const lives = document.querySelector('.lives')
    const hint = document.getElementById('hint')
+   const rightAnswer = document.querySelector('.right-answer')
+   const correctWord = document.getElementById('correct-word')
    const canvas = document.getElementById('hangman')
    const hintBtn = document.getElementById('hint-btn')
    const playAgainBtn = document.getElementById('play-again-btn')
@@ -189,6 +191,8 @@
                 this.livesCount--
                 if(this.livesCount == 0){
                     lives.innerHTML = 'GAME OVER'
+                    show(rightAnswer)
+                    correctWord.innerHTML = startGameObject.randomWord
                     return
                 }
                 livesCounter.innerHTML = this.livesCount
@@ -301,6 +305,7 @@
                 })
                 hide(gameSection)
                 hide(hint)
+                hide(rightAnswer)
                 fadeIn(homePage)
                 show(homePage)
             },400)
