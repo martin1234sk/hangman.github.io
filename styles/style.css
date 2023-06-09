@@ -180,6 +180,11 @@ button{
     color: var(--main-color);
     font-weight: 100;
 }
+.right-answer{
+    color: var(--main-color);
+    font-weight: 100;
+    text-transform: capitalize;
+}
 #hangman{
     border: 2px dashed var(--text-color);
 }
