@@ -324,8 +324,15 @@ button{
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
+    .alphabet{
+        grid-template-columns: repeat(5, 1fr);
+    }
     .home-page-container{
         padding: 1.5rem ;
+    }
+    .game-section-header h3{
+        font-size: .85rem;
+        width: 280px;
     }
 }
