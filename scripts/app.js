@@ -353,6 +353,15 @@
     // responsivity
 
         // responsive canvas
+        window.addEventListener('load', ()=>{
+            if(window.innerWidth < 425){
+                canvas.width = 300
+            }
+
+            if(window.innerWidth < 350){
+                canvas.width = 280
+            }
+        })
 
         window.addEventListener('resize', ()=>{
             if(window.innerWidth < 425){
@@ -362,5 +371,4 @@
             if(window.innerWidth < 350){
                 canvas.width = 280
             }
-
         })
